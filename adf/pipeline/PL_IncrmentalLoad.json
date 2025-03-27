@@ -104,7 +104,7 @@
 					"storedProcedureName": "[dbo].[UpdateControlTable]",
 					"storedProcedureParameters": {
 						"@NewLastProcessedTime": {
-							"value": " @utcnow()",
+							"value": "@formatDateTime(utcnow(), 'yyyy-MM-dd HH:mm:ss')",
 							"type": "String"
 						}
 					}
