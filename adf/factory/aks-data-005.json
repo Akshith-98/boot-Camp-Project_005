@@ -1,0 +1,9 @@
+{
+	"name": "aks-data-005",
+	"location": "canadacentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "14598c06-58f1-4a53-a770-d09c0533f5b2",
+		"tenantId": "54801efd-3cf7-4fca-9064-f289b6166efa"
+	}
+}
