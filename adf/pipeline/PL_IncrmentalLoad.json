@@ -110,8 +110,9 @@
 				"typeProperties": {
 					"storedProcedureName": "[dbo].[UpdateControlTable]",
 					"storedProcedureParameters": {
-						"undefined": {
-							"value": ""
+						"@NewLastProcessedTime": {
+							"value": "@utcnow()",
+							"type": "String"
 						}
 					}
 				},
