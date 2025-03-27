@@ -101,13 +101,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"storedProcedureName": "[dbo].[UpdateControlTable]",
-					"storedProcedureParameters": {
-						"@NewLastProcessedTime": {
-							"value": "@formatDateTime(utcnow(), 'yyyy-MM-dd HH:mm:ss')",
-							"type": "String"
-						}
-					}
+					"storedProcedureName": "[dbo].[UpdateControlTable]"
 				},
 				"linkedServiceName": {
 					"referenceName": "ls_aks_sqldb",
