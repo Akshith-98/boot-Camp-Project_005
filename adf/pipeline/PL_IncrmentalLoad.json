@@ -87,6 +87,38 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "MarkAsProcessed",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "IncrementalDataLoad",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[UpdateControlTable]",
+					"storedProcedureParameters": {
+						"undefined": {
+							"value": ""
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "ls_aks_sqldb",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
